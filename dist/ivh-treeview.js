@@ -100,7 +100,7 @@ angular.module('ivh.treeview').directive('ivhTreeviewChildren', function() {
     restrict: 'AE',
     require: '^ivhTreeviewNode',
     template: [
-      '<ul ng-if="getChildren().length" class="ivh-treeview">',
+      '<ul ng-if="getChildren().length" class="ivh-treeview" style="list-style-type:none">',
         '<li ng-repeat="child in getChildren()"',
             'ng-hide="trvw.hasFilter() && !trvw.isVisible(child)"',
             'class="ivh-treeview-node"',
@@ -686,7 +686,7 @@ angular.module('ivh.treeview').directive('ivhTreeview', ['ivhTreeviewMgr', funct
       }
     },
     template: [
-      '<ul class="ivh-treeview">',
+      '<ul class="ivh-treeview" style="list-style-type:none">',
         '<li ng-repeat="child in root | ivhTreeviewAsArray"',
             'ng-hide="trvw.hasFilter() && !trvw.isVisible(child)"',
             'class="ivh-treeview-node"',
